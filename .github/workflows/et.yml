@@ -35,9 +35,9 @@ jobs:
       - name: installs
         run: pip install -r requirements.txt
 
-      # Runs script load
-      - name: Correr python load
-        run: python load.py
+      # Runs script extract
+      - name: Correr python extract
+        run: python extract.py
 
       # Runs script transform
       - name: Correr python transform
