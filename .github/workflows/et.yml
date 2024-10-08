@@ -10,7 +10,7 @@ on:
   pull_request:
     branches: [ "main" ]
   schedule:
-    - cron: '5 13,22 * * *'  # Runs at 9.05 AM y 17.04 PM every day
+    - cron: '30 12,22 * * *'  # Runs at 8.30 AM y 17.30 PM every day
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
@@ -44,6 +44,7 @@ jobs:
         run: |
           git config --global user.name "${{ secrets.USER_USER }}"
           git config --global user.email "${{ secrets.EMAIL_EMAIL }}"
+          echo "ls"
           git add .  # Replace with your chosen file format
           git commit -m "Saved DataFrame"
           git push
