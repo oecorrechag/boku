@@ -60,7 +60,9 @@ jobs:
         run: |
           git config --global user.name "${{ secrets.USER_USER }}"
           git config --global user.email "${{ secrets.EMAIL_EMAIL }}"
+          git status
           git add .     # Replace with your chosen file format
+          git status
           git commit -m "Saved DataFrame"
           git status
           git push
