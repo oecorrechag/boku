@@ -44,7 +44,7 @@ jobs:
         run: |
           git config --global user.name "${{ secrets.USER_USER }}"
           git config --global user.email "${{ secrets.EMAIL_EMAIL }}"
-          git add df  # Replace with your chosen file format
+          git add .  # Replace with your chosen file format
           git commit -m "Saved DataFrame"
           git push
         env:
@@ -59,7 +59,7 @@ jobs:
         run: |
           git config --global user.name "${{ secrets.USER_USER }}"
           git config --global user.email "${{ secrets.EMAIL_EMAIL }}"
-          git add df  # Replace with your chosen file format
+          git add .  # Replace with your chosen file format
           git commit -m "Saved DataFrame"
           git push
         env:
