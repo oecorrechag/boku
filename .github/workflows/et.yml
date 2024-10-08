@@ -46,10 +46,8 @@ jobs:
           git config --global user.email "${{ secrets.EMAIL_EMAIL }}"
           git add data/raw/housing_data_raw.csv    # Replace with your chosen file format
           # git status
-          git commit -m "Saved DataFrame"
+          git commit -m "Saved DataFrame raw"
           git push
-        # env:
-        #   GITHUB_TOKEN: ${{ secrets.boku }}
 
       # Runs script transform
       - name: Correr python transform
@@ -58,10 +56,8 @@ jobs:
       # Commit and save
       - name: Commit and Push Changes 2
         run: |
-          git config --global user.name "${{ secrets.USER_USER }}"
-          git config --global user.email "${{ secrets.EMAIL_EMAIL }}"
           git add data/transform/housing_data_clean.csv     # Replace with your chosen file format
-          git commit -m "Saved DataFrame"
+          git commit -m "Saved DataFrame cleaned"
           git push
         env:
           GITHUB_TOKEN: ${{ secrets.boku }}
