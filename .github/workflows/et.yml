@@ -64,7 +64,6 @@ jobs:
           git add .     # Replace with your chosen file format
           git status
           git commit -m "Saved DataFrame"
-          git status
           git push
         env:
           GITHUB_TOKEN: ${{ secrets.boku }}
