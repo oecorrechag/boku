@@ -47,6 +47,7 @@ jobs:
           ls
           git status
           git add .  # Replace with your chosen file format
+          git status
           git commit -m "Saved DataFrame"
           git push
         env:
