@@ -10,6 +10,7 @@ print(f'shape old: {housing_data_raw.shape}')
 
 data = fetch_california_housing(as_frame=True)
 housing_data_new = data.frame
+housing_data_new = housing_data_new.sample(frac=0.05)
 
 df = pd.concat([housing_data_raw, housing_data_new], ignore_index=True)
 
