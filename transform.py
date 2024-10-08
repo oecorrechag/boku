@@ -17,4 +17,4 @@ df = pd.concat([housing_data_raw, housing_data_clean], ignore_index=True)
 
 df.to_csv('data/transform/housing_data_clean.csv', encoding = 'utf-8-sig', index = False)
 
-print(f'Transform - La fecha es: {ahora}')
+print(f'shape actual: {df.shape}')

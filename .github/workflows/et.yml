@@ -45,7 +45,6 @@ jobs:
           git config --global user.name "${{ secrets.USER_USER }}"
           git config --global user.email "${{ secrets.EMAIL_EMAIL }}"
           git add data/raw/housing_data_raw.csv    # Replace with your chosen file format
-          # git status
           git commit -m "Saved DataFrame raw"
           git push
 

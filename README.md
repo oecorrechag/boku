@@ -3,8 +3,8 @@ This example is designed to extra
 
 Breakdown:
 
-5: This represents the minute of the hour. The action will trigger at the 5th minute of the hour.
-9,17: This specifies the hours of the day. The action will run at 9 AM and 5 PM.
-*: This indicates any day of the month. The action will execute on any day of the month.
-*: This represents any month of the year. The action will run in any month.
+5: This represents the minute of the hour. The action will trigger at the 5th minute of the hour. <br>
+9,17: This specifies the hours of the day. The action will run at 9 AM and 5 PM. <br>
+*: This indicates any day of the month. The action will execute on any day of the month. <br>
+*: This represents any month of the year. The action will run in any month. <br>
 *: This specifies any day of the week. The action will trigger on any day of the week.
