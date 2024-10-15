@@ -33,7 +33,7 @@ jobs:
 
       # Instalaciones 2
       - name: verificar mysql
-        run: sudo systemctl status mysql
+        run: sudo systemctl start mysql
 
       # Instalaciones
       - name: installs
