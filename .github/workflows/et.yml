@@ -29,11 +29,19 @@ jobs:
 
       # Definir la variable nombre para que la pase al siguiente paso
       - name: Definir variable
-        run: echo "USERNAME=${{ github.actor }}" >> $GITHUB_ENV
+        run: echo "BD_KEY=${{ vars.BD_KEY }}" >> $GITHUB_ENV
 
       # Instalaciones
       - name: installs
         run: pip install -r requirements.txt
+
+      # Instalaciones mi paquete 
+      - name: install paquete
+        run: pip install git+https://"${{ secrets.paquete }}"@github.com/oecorrechag/mypackage.git
+
+      # Instalaciones 2
+      - name: verificar
+        run: pip list
 
       # Runs script extract
       - name: Correr python extract
