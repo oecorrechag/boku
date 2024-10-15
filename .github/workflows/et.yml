@@ -45,11 +45,7 @@ jobs:
 
       # Instalaciones 2
       - name: verificar
-        run: pip install -U setuptools
-
-      # Instalaciones 3
-      - name: verificar
-        run: pip install MySQL-python
+        run: pip install MySQL-python-connector
 
       # Runs script extract
       - name: Correr python extract
