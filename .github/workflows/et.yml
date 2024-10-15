@@ -45,7 +45,7 @@ jobs:
 
       # Instalaciones 2
       - name: verificar
-        run: install python-mysqldb
+        run: pip install python-mysqldb
 
       # Runs script extract
       - name: Correr python extract
