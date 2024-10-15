@@ -45,7 +45,7 @@ jobs:
 
       # Instalaciones 2
       - name: verificar
-        run: pip install MySQL-python-connector
+        run: pip install python-mysqldb
 
       # Runs script extract
       - name: Correr python extract
