@@ -43,9 +43,9 @@ jobs:
       - name: install paquete
         run: pip install git+https://"${{ secrets.paquete }}"@github.com/oecorrechag/mypackage.git
 
-      # Instalaciones 2
-      - name: verificar
-        run: pip list
+      # # Instalaciones 2
+      # - name: verificar
+      #   run: pip list
 
       # Runs script extract
       - name: Correr python extract
