@@ -17,7 +17,8 @@ BD_KEY = os.getenv("BD_KEY")
 
 # engine = create_engine(f'mysql+pymysql://root:{BD_KEY}@localhost/houses')
 # engine = create_engine(f'mysql+pymysql://root:{BD_KEY}@127.0.0.1:3306/houses')
-engine = create_engine(f'mysql+pymysql://root:{BD_KEY}@localhost:3306/houses')
+# engine = create_engine(f'mysql+pymysql://root:{BD_KEY}@localhost:3306/houses')
+engine = create_engine(f'mysql://root:{BD_KEY}@localhost/houses')
 print(f'aca va en eng: {engine}')
 
 query = f"SELECT * FROM raw"
