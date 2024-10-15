@@ -39,12 +39,12 @@ jobs:
       - name: install paquete
         run: pip install git+https://"${{ secrets.paquete }}"@github.com/oecorrechag/mypackage.git
 
-      # # Instalaciones 2
-      # - name: verificar
-      #   run: pip install python-mysqldb
+      # Instalaciones 2
+      - name: verificar
+        run: pip install mysqlclient
 
       # Runs script extract
-      - name: Correr python extract
+      - name: Correr python extract2
         run: python extract.py
 
       # Commit and save
