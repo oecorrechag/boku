@@ -15,10 +15,19 @@ housing_data_new = housing_data_new.sample(frac=0.005)
 
 BD_KEY = os.getenv("BD_KEY")
 
-engine = create_engine(f'mysql+pymysql://root:{BD_KEY}@mysql:3306/houses')
+engine = create_engine(f'mysql+pymysql://root:{BD_KEY}@localhost/houses')
+print(f'aca va en eng: {engine}')
 
-df_old = read_table(engine, 'raw')
-print(f'shape actual: {df_old.shape}')
+query = f"SELECT * FROM raw"
+df_old = pd.read_sql_query(query, engine)
+print(f"Loaded table: raw")
+
+
+print(df_old.head())
+
+
+# df_old = read_table(engine, 'raw')
+# print(f'shape actual: {df_old.shape}')
 
 data = fetch_california_housing(as_frame=True)
 data_new = data.frame
