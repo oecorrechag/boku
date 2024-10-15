@@ -4,7 +4,7 @@ import datetime
 from sqlalchemy import create_engine
 from sklearn.datasets import fetch_california_housing
 
-from mypackage import read_table, upload_data_mysql
+from mypackage.connect import read_table, upload_data_mysql
 
 ahora = datetime.datetime.now()
 print(f'Extrac - La fecha es: {ahora}')
