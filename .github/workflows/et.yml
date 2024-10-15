@@ -29,7 +29,7 @@ jobs:
 
       # Definir la variable nombre para que la pase al siguiente paso
       - name: Definir variable
-        run: echo "BD_KEY=${{ vars.BD_KEY }}" >> $GITHUB_ENV
+        run: echo "BD_KEY=${{ secrets.BD_KEY }}" >> $GITHUB_ENV
 
       # Instalaciones 2
       - name: verificar mysql
