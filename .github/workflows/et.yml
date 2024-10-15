@@ -31,6 +31,10 @@ jobs:
       - name: Definir variable
         run: echo "BD_KEY=${{ vars.BD_KEY }}" >> $GITHUB_ENV
 
+      # Instalaciones 2
+      - name: verificar mysql
+        run: sudo systemctl status mysql
+
       # Instalaciones
       - name: installs
         run: pip install -r requirements.txt
