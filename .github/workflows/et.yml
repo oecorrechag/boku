@@ -27,29 +27,13 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v4
 
-      # Definir la variable nombre para que la pase al siguiente paso
-      - name: Definir variable
-        run: echo "BD_KEY=${{ secrets.BD_KEY }}" >> $GITHUB_ENV
-
       # Instalaciones
       - name: installs
         run: pip install -r requirements.txt
 
-      # Instalaciones mi paquete 
-      - name: install paquete
-        run: pip install git+https://"${{ secrets.paquete }}"@github.com/oecorrechag/mypackage.git
-
-      # Instalaciones 2
-      - name: verificar
-        run: pip install mysqlclient
-
       # Runs script extract
-      - name: Correr python extract2
+      - name: Correr python extract
         run: python extract.py
-
-      # Runs message
-      - name: mensage de warning
-        run: echo 'vamos a ver'
 
       # Commit and save
       - name: Commit and Push Changes 1
