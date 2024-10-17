@@ -9,13 +9,10 @@ from mypackage.connect import read_table, upload_data_mysql
 ahora = datetime.datetime.now()
 print(f'Extrac - La fecha es: {ahora}')
 
-<<<<<<< HEAD
 housing_data_raw = pd.read_csv('data/raw/housing_data_raw.csv', 
                                sep = ',', decimal = '.', header = 0, encoding = 'utf-8')
 print(f'shape old: {housing_data_raw.shape}')
 
-=======
->>>>>>> 260d4cfc64f303eff6a356285ed8b111fca06fc8
 data = fetch_california_housing(as_frame=True)
 housing_data_new = data.frame
 housing_data_new = housing_data_new.sample(frac=0.005)
