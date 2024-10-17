@@ -5,7 +5,8 @@ import datetime
 ahora = datetime.datetime.now()
 print(f'Extrac - La fecha es: {ahora}')
 
-housing_data_raw = pd.read_csv('data/raw/housing_data_raw.csv', sep = ',', decimal = '.', header = 0, encoding = 'utf-8')
+housing_data_raw = pd.read_csv('data/raw/housing_data_raw.csv', 
+                               sep = ',', decimal = '.', header = 0, encoding = 'utf-8')
 print(f'shape old: {housing_data_raw.shape}')
 
 data = fetch_california_housing(as_frame=True)
