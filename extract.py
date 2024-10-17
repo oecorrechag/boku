@@ -2,8 +2,6 @@ import pandas as pd
 import datetime
 from sklearn.datasets import fetch_california_housing
 
-from mypackage.connect import read_table, upload_data_mysql
-
 ahora = datetime.datetime.now()
 print(f'Extrac - La fecha es: {ahora}')
 
