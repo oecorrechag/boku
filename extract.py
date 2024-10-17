@@ -1,7 +1,5 @@
-import os
 import pandas as pd
 import datetime
-from sqlalchemy import create_engine
 from sklearn.datasets import fetch_california_housing
 
 from mypackage.connect import read_table, upload_data_mysql
