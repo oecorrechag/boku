@@ -5,6 +5,7 @@ import datetime
 ahora = datetime.datetime.now()
 print(f'Extrac - La fecha es: {ahora}')
 
+# load data raw
 housing_data_raw = pd.read_csv('data/raw/housing_data_raw.csv', 
                                sep = ',', decimal = '.', header = 0, encoding = 'utf-8')
 print(f'shape old: {housing_data_raw.shape}')
@@ -15,6 +16,7 @@ housing_data_new = housing_data_new.sample(frac=0.005)
 
 df = pd.concat([housing_data_raw, housing_data_new], ignore_index=True)
 
+# Save data raw
 df.to_csv('data/raw/housing_data_raw.csv', encoding = 'utf-8-sig', index = False)
 
 print(f'shape actual: {df.shape}')

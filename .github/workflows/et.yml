@@ -39,6 +39,10 @@ jobs:
       - name: Correr python extract
         run: python extract.py
 
+      # Runs message
+      - name: mensage de warning
+        run: echo 'vamos a ver'
+
       # Commit and save
       - name: Commit and Push Changes 1
         run: |

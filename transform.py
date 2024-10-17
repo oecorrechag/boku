@@ -5,6 +5,7 @@ import datetime
 ahora = datetime.datetime.now()
 print(f'Transform - La fecha es: {ahora}')
 
+# Load raw data
 housing_data_raw = pd.read_csv('data/raw/housing_data_raw.csv', 
                                sep = ',', decimal = '.', header = 0, encoding = 'utf-8')
 print(f'dim now housing_data_raw: {housing_data_raw.shape}')
