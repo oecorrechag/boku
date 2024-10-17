@@ -20,32 +20,9 @@ data = fetch_california_housing(as_frame=True)
 housing_data_new = data.frame
 housing_data_new = housing_data_new.sample(frac=0.005)
 
-BD_KEY = os.getenv("BD_KEY")
+df = pd.concat([housing_data_raw, housing_data_new], ignore_index=True)
 
-# engine = create_engine(f'mysql+pymysql://root:{BD_KEY}@localhost/houses')
-# engine = create_engine(f'mysql+pymysql://root:{BD_KEY}@127.0.0.1:3306/houses')
-# engine = create_engine(f'mysql+pymysql://root:{BD_KEY}@localhost:3306/houses')
-engine = create_engine(f'mysql://root:{BD_KEY}@localhost/houses')
+# Save data raw
+df.to_csv('data/raw/housing_data_raw.csv', encoding = 'utf-8-sig', index = False)
 
-print(f'aca va en eng: {engine}')
-
-query = f"SELECT * FROM raw"
-df_old = pd.read_sql_query(query, engine)
-print(f"Loaded table: raw")
-
-
-print(df_old.head())
-
-
-# df_old = read_table(engine, 'raw')
-# print(f'shape actual: {df_old.shape}')
-
-data = fetch_california_housing(as_frame=True)
-data_new = data.frame
-data_new = data_new.sample(frac=0.0005)
-print(f'shape data new: {data_new.shape}')
-
-df = pd.concat([df_old, data_new], ignore_index=True)
-print(f'shape new: {df.shape}')
-
-upload_data_mysql(engine, df, 'raw')
+print(f'shape actual: {df.shape}')
