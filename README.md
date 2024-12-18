@@ -1,6 +1,10 @@
 # boku
 This example is designed to extra
 
+Este ejercicio es inspirado en: https://archive.is/vAzUJ#selection-1223.0-1375.9
+
+https://24timezones.com/es/difference/bogota/utc?dt=2024-10-17T1705
+
 Breakdown:
 
 5: This represents the minute of the hour. The action will trigger at the 5th minute of the hour. <br>
