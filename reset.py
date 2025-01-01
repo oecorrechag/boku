@@ -24,4 +24,3 @@ def comprobar(df):
 
     else:
         print(f'dim now housing_data_raw: {housing_data_raw.shape}')
-
