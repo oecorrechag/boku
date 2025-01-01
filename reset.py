@@ -4,7 +4,6 @@ import datetime
 from sklearn.datasets import fetch_california_housing
 
 ahora = datetime.datetime.now()
-print(f'Transform - La fecha es: {ahora}')
 
 # Load raw data
 housing_data_raw = pd.read_csv('data/raw/housing_data_raw.csv', 
@@ -21,6 +20,8 @@ def comprobar(df):
         housing_data.rename(columns={'MedHouseVal': 'target'}, inplace=True)
         housing_data['prediction'] = housing_data['target'].values + np.random.normal(0, 5, housing_data.shape[0])
         housing_data.to_csv('data/transform/housing_data_clean.csv', encoding = 'utf-8-sig', index = False)
+        print(f'Reset - La fecha es: {ahora}')
 
     else:
         print(f'dim now housing_data_raw: {housing_data_raw.shape}')
+        print(f'La dim actual: {df.shape}')

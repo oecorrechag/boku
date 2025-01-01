@@ -14,8 +14,5 @@ housing_data_new = data.frame
 housing_data_new = housing_data_new.sample(frac=0.0005)
 
 df = pd.concat([housing_data_raw, housing_data_new], ignore_index=True)
-
-# Save data raw
 df.to_csv('data/raw/housing_data_raw.csv', encoding = 'utf-8-sig', index = False)
-
 print(f'shape actual: {df.shape}')

@@ -19,8 +19,5 @@ housing_data_clean = pd.read_csv('data/transform/housing_data_clean.csv',
 print(f'dim now housing_data_clean: {housing_data_clean.shape}')
 
 df = pd.concat([housing_data_raw, housing_data_clean], ignore_index=True)
-print(f'dim now df: {df.shape}')
-
+# print(f'shape actual: {df.shape}')
 df.to_csv('data/transform/housing_data_clean.csv', encoding = 'utf-8-sig', index = False)
-
-print(f'shape actual: {df.shape}')
