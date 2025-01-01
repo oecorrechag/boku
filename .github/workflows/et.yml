@@ -32,6 +32,20 @@ jobs:
         run: pip install -r requirements.txt
 
       # Runs script extract
+      - name: Correr python reset
+        run: python reset.py
+
+      # Commit and save
+      - name: Commit and Push Changes reset
+        run: |
+          git config --global user.name "${{ secrets.USER_USER }}"
+          git config --global user.email "${{ secrets.EMAIL_EMAIL }}"
+          git add data/raw/housing_data_raw.csv    # Replace with your chosen file format
+          git add data/transform/housing_data_clean.csv    # Replace with your chosen file format
+          git commit -m "Saved DataFrame reset"
+          git push
+
+      # Runs script extract
       - name: Correr python extract
         run: python extract.py
 
