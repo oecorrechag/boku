@@ -24,6 +24,5 @@ def comprobar(df):
 
     else:
         print(f'dim now housing_data_raw: {housing_data_raw.shape}')
-        print(f'La dim actual: {df.shape}')
 
 comprobar(housing_data_raw)
